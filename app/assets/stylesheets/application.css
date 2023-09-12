@@ -13,3 +13,15 @@
  *= require_tree .
  *= require_self
  */
+ .background {
+  background-color:bisque;
+ }
+
+ .tasks{
+  border-bottom: solid lightgrey;
+ }
+
+ img{
+  width: 20px;
+  height: 20px;
+ }

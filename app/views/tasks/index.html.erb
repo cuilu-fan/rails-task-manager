@@ -1,0 +1,23 @@
+<div class="mt-4 mb-4">
+  <div>
+    <h1>My Tasks</h1>
+  </div>
+  <div class="tasks">
+    <% @tasks.each do |task| %>
+      <% if task.completed == false%>
+        <div class="mt-4 mb-4">
+          <input type="checkbox"/>
+          <lable><%=link_to task.title, task_path(task) %> <%= link_to "🗑️", task_path(task) %></label>
+        </div>
+      <% else %>
+        <div>
+          <input type="checkbox" checked/>
+          <lable><%=link_to task.title, task_path(task)%> <%= link_to "🗑️", task_path(task) %></label>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="mt-6 mb-6">
+    <p><%=link_to '+add a new task', new_task_path%></p>
+  </div>
+</div>
